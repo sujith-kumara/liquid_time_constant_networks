@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy  as np
 import os
 
-class CTRNN(tf.keras.layers.Layer):
+class CTRNN(tf.nn.rnn_cell.RNNCell):
 
     def __init__(self, num_units,cell_clip=-1,global_feedback=False,fix_tau=True):
         self._num_units = num_units
