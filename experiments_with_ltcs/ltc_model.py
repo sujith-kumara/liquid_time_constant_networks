@@ -14,7 +14,7 @@ class ODESolver(Enum):
     Explicit = 1
     RungeKutta = 2
 
-class LTCCell(tf.nn.rnn_cell.RNNCell):
+class LTCCell(tf.keras.layers.Layer):
 
     def __init__(self, num_units):
 
